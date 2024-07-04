@@ -1,9 +1,8 @@
-package dto;
+package com.shoppingApp.order_service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import model.OrderLineItems;
 
 import java.util.List;
 

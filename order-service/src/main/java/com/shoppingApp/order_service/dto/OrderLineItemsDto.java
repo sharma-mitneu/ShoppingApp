@@ -1,4 +1,4 @@
-package dto;
+package com.shoppingApp.order_service.dto;
 
 import lombok.*;
 

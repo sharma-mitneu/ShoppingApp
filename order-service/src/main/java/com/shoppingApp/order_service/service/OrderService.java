@@ -1,13 +1,13 @@
-package service;
+package com.shoppingApp.order_service.service;
 
-import dto.OrderLineItemsDto;
+import com.shoppingApp.order_service.repository.OrderRepository;
+import com.shoppingApp.order_service.dto.OrderLineItemsDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import model.Order;
-import dto.OrderRequest;
-import model.OrderLineItems;
+import com.shoppingApp.order_service.model.Order;
+import com.shoppingApp.order_service.dto.OrderRequest;
+import com.shoppingApp.order_service.model.OrderLineItems;
 import org.springframework.stereotype.Service;
-import repository.OrderRepository;
 
 import java.util.List;
 import java.util.UUID;
@@ -29,6 +29,9 @@ public class OrderService {
                 .toList();
 
         order.setOrderLineItemsList(orderLineItemsList);
+
+        //call inventory service and place order if product is in stock !
+
         orderRepository.save(order);
 
     }

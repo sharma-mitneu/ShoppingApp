@@ -1,4 +1,4 @@
-package model;
+package com.shoppingApp.order_service.model;
 
 import jakarta.persistence.*;
 import lombok.*;
