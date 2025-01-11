@@ -26,6 +26,7 @@ public class ProductController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getAllProducts() {
+        // We can implement timeout feature here to check for circuit breaker functionality
         return productService.getAllProducts();
     }
 }
