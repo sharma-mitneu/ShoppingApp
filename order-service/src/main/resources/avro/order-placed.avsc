@@ -1,0 +1,31 @@
+{
+    "type": "record",
+    "name": "OrderPlaced",
+    "namespace": "com.shopping_app.microservices.order_service.event",
+    "fields": [
+        {
+            "name": "orderId",
+            "type": "string"
+        },
+        {
+            "name": "customerId",
+            "type": "string"
+        },
+        {
+            "name": "orderTotal",
+            "type": "double"
+        },
+        {
+            "name": "orderItems",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "name": "OrderItem",
+                    "fields": [
+                        { "name": "orderNumber","type": "string"},
+                        { "name": "email", "type": "string" },
+                        { "name": "firstname", "type": "string" },
+                        { "name": "lastname", "type": "string" }
+                    ]
+}
